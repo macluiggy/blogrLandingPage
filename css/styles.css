@@ -35,9 +35,14 @@ header {
     padding-bottom: 10%;
     border-radius: 0 0 0 200px;
 }
+#upper-section {
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+}
 nav {
     padding: 4.0%; 
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -51,9 +56,8 @@ a {
     display: inline-block;
     font-weight: bolder;
     height: fit-content;
-    padding-right: 30px;
     position: relative;
-    bottom: 17px;
+    top: 0.7em;
 }
 .menu,
 .submenu {
@@ -68,22 +72,21 @@ a {
 }*/
 .menu {
     display: flex;
+    width: 100%;
 }
 .item {
-    padding: 10px;
+    padding: 1em;
 }
 .buttons {
-    border: sol;
-    position: absolute;
+    position: relative;
     top: 8%;
-    right: 150px;
-    width: 200px;
-    height: 120px;
+    right: 0;
+    width: 15em;
+    height: 0;
     height: fit-content;
 }
 .button {
     padding: 10px 20px 10px 20px;
-    border: solid;
     height: fit-content;
     border-radius: 30px;
 }
@@ -194,8 +197,97 @@ a {
 
 
 /* Mobile header*/
-@media screen and (max-width: 375px) {
-    ul {
-        display: none;
+@media screen and (max-width: 500px) {
+    body {
+        width: 100%;
+        margin: 0 auto;
     }
+    #upper-section {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    nav {
+         width: 100%;
+         background-color: white;
+         color: black;
+         flex-direction: column;
+         border-radius: 0.5em;
+         height: fit-content;
+     }
+     .hide {
+         
+        display: none;
+     }
+     .show{
+         display: block;
+     }
+     #logo {
+         top: 0;
+     }
+     #containerBurger {
+        display: inline-block;
+        cursor: pointer;
+        border: solid;
+        position: relative;
+        left: 11em;
+      }
+      
+      .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: var(--white-text);
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+      
+      .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+      }
+      
+      .change .bar2 {opacity: 0;}
+      
+      .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+      }
+
+     nav .menu {
+         display: flex;
+         flex-direction: column;
+         text-align: center;
+     }
+     nav .item:hover ul {
+         animation-name: showItemContent;
+         animation-duration: 1s;
+         animation-fill-mode: forwards;
+     }
+     @keyframes showItemContent {
+         0% {
+             display: none;
+         }
+         100% {
+             display: block;
+         }
+     }
+     nav .menu .submenu {
+         position: relative;
+         box-shadow: 0 0 0;
+         background-color: rgba(128, 128, 128, 0.171);
+     }
+     .buttons {
+         height: fit-content;
+         display: flex;
+         justify-content: center;
+         margin: 0 auto;
+     }
+     .buttons .login, .sign-up {
+         width: 50%;
+         margin: 0 auto;
+     }
+     .sign-up {
+         background: linear-gradient(to right, var(--very-light-red-gradient), var(--light-red-gradient));
+         color: white;
+     }
 }
+

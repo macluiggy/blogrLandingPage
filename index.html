@@ -17,8 +17,15 @@
 <body>
   <header>
     <!--<img src="images/bg-pattern-intro.svg" alt="" id="patter-intro">-->
-    <nav>
+    <div id="upper-section">
       <div id="logo">Blogr</div>
+      <div id="containerBurger" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    <nav class="hide" id="toogleBar">
+      
       <ul class="menu">
       <li class="item">
   <a tabindex="0" class="toogleItem">Product △</a>
@@ -61,6 +68,7 @@
 </li>
 </ul>
 </nav>
+    </div>
   <div id="presentation">
     <h1>A modern publishing platform</h1>
   <h3>Grow your audience and build your online brand</h3>
@@ -123,6 +131,9 @@
     Coded by <a href="#">Your Name Here</a>.
   </div>
 
+  <script>function myFunction(x) {
+    x.classList.toggle("change");
+  }</script>
   <script src="js/script.js"></script>
 </body>
 </html>
