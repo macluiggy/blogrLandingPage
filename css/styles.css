@@ -25,54 +25,177 @@
 
 body {
     font-family: 'Overpass', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
+    
 }
 header {
     width: 100%;
-    background: linear-gradient(90deg, var( --very-light-red-gradient), var(--light-red-gradient));
+    background: url('/images/bg-pattern-intro.svg') center fixed no-repeat, linear-gradient(90deg, var( --very-light-red-gradient), var(--light-red-gradient));
     color: var(--white-text);
+    padding-bottom: 10%;
+    border-radius: 0 0 0 200px;
 }
 nav {
-    padding: 0 15px;
+    padding: 4.0%; 
     width: 80%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: row;
 }
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 #logo {
-    border: solid;
-    font-size: 30px;
-    padding: 7.5px 10px 7.5px 0;
+    font-size: 3em;
     display: inline-block;
     font-weight: bolder;
+    height: fit-content;
+    padding-right: 30px;
+    position: relative;
+    bottom: 17px;
 }
 .menu,
 .submenu {
     list-style-type: none;
 }
-.item {
-    padding: 10px;
-}
+
 .item.button {
     padding: 9px 5px;
 }
-.item:not(.button) a:hover,
+/*.item:not(.button) a:hover,
 .item a:hover::after {
-    text-decoration: underline;
-}
+}*/
 .menu {
     display: flex;
 }
-.menu li a {
-    display: block;
-    padding: 15px 5px;
+.item {
+    padding: 10px;
 }
-.active {
+.buttons {
+    border: sol;
+    position: absolute;
+    top: 8%;
+    right: 150px;
+    width: 200px;
+    height: 120px;
+    height: fit-content;
+}
+.button {
+    padding: 10px 20px 10px 20px;
     border: solid;
+    height: fit-content;
+    border-radius: 30px;
+}
+.login {
+    background-color: transparent;
+    border: none;
+}
+.login:hover {
+    cursor: pointer;
+}
+.sign-up {
+    background-color: white;
+    color: var(--light-red);
+}
+.sign-up:hover {
+    animation-name: changeSignUpColor;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+@keyframes changeSignUpColor {
+    0% {
+        background-color: white;
+    }
+    100% {
+        background-color: var(--very-light-red);
+        color: white;
+        border: solid 1px var(--very-light-red);
+    }
+}
+.submenu {
+    color: black;
+    background-color: var(--white-text);
+    position: absolute;
+    border-radius: 5%;
+    display: none;
+    padding: 10px;
+    box-shadow: 0 5px 20px 0.2px;
+}
+.submenu .subitem {
+    padding: 5px;
+}
+.submenu .subitem a:hover {
+    font-weight: bold;
+}
+.item:hover ul {
+    display: block;
+}
+#presentation {
+    text-align: center;
+    border: none;
+    padding: 20px;
+}
+#presentation h1 {
+    font-size: 3.67em;
+}
+#enroll {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+#enroll span {
+    border: solid 1px;
+    padding: 1em;
+    border-radius: 30px;
+    margin: 10px;
+}
+#start-for-free {
+    background-color: white;
+    color: var(--very-light-red);
+    font-weight: bold;
+}
+#start-for-free:hover {
+    animation-name: changeColor1;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+@keyframes changeColor1 {
+    0% {
+        background-color: white;
+    }
+    100% {
+        background-color: var(--very-light-red);
+        color: white;
+        border: solid 1px var(--very-light-red);
+    }
+}
+#learn-more {
+    font-weight: bold;
+}
+#learn-more:hover {
+    animation-name: changeColor2;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+@keyframes changeColor2 {
+    0% {
+        background-color: transparent;
+    }
+    100% {
+        background-color: var(--white-text);
+        color: var(--very-light-red);
+        border: solid 1px var(--white-text);
+    }
 }
 
-/* Mobile */
+
+/* Mobile header*/
 @media screen and (max-width: 375px) {
-    
+    ul {
+        display: none;
+    }
 }
