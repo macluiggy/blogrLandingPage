@@ -14,7 +14,7 @@
     --light-red-gradient: hsl(353, 100%, 62%);
     /*backgroung gradient body*/
     --very-dark-gray-blue-gradient: hsl(237, 17%, 21%);
-    --very-dark-desaturated-blue-gradient: hsl(237, 23%, 32%);
+    --very-dark-desaturated-blue-gradient: hsla(237, 23%, 32%, 0.835);
 
 }
 * {
@@ -225,7 +225,6 @@ a {
      #containerBurger {
         display: inline-block;
         cursor: pointer;
-        border: solid;
         position: relative;
         left: 11em;
       }
@@ -289,3 +288,64 @@ a {
      }
 }
 
+/*main section*/
+main {
+    border: solid 1px;
+    width: 100%;
+}
+main p {
+    line-height: 2em;
+}
+#main1 {
+    /*background: url('/images/bg-pattern-circles.svg') no-repeat;*/
+    border: solid;
+    display: flex;
+    flex-wrap: wrap;
+    background-position: 160% -50%;
+    padding-bottom: 2em;
+    position: relative;
+}
+#main-title {
+    text-align: center;
+    border: solid;
+    padding: 7em 0 4em 0;
+    width: 100%;
+    font-size: 1.5em;
+    position: inherit;
+    z-index: 1;
+}
+.main-text {
+    border: solid;
+    width: 53%;
+    padding: 0 5em 0 5em;
+    position: relative;
+    z-index: 1;
+}
+.main-text h1 {
+    padding: 0 0em 1em 0;
+}
+.main-img {
+    width: 50%;
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    top: 5.5em;
+}
+#main1 p {
+    padding-bottom: 4em;
+}
+
+#main2 {
+    border: solid springgreen;
+    border-radius: 0 10em 0 10em;
+    margin-top: 7em;
+    display: flex;
+    padding: 5em 0 5em 0;
+    background-image: radial-gradient(circle at 20% -90% , var(--very-dark-desaturated-blue-gradient) 1%, var(--very-dark-gray-blue-gradient) 100%), url('../images/bg-pattern-circles.svg') ;
+    background-repeat: no-repeat;
+    background-position: -80% 80%;
+    background-color: white;
+}
+#main2 .main-text {
+    left: 47%;
+}

@@ -15,7 +15,7 @@
  //aqui vamos a mostrar y ocultar el contenido con la
  var containerBurger = document.querySelector('#containerBurger');
  var navBar = document.querySelector('#toogleBar');
-console.log(containerBurger.innerHTML);
+//console.log(containerBurger.innerHTML);
 
 containerBurger.addEventListener('click', function () {
  if (navBar.style.display === 'block') {
