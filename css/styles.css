@@ -292,22 +292,25 @@ a {
 main {
     border: solid 1px;
     width: 100%;
+    position: relative;
 }
 main p {
     line-height: 2em;
 }
 #main1 {
     /*background: url('/images/bg-pattern-circles.svg') no-repeat;*/
-    border: solid;
     display: flex;
     flex-wrap: wrap;
     background-position: 160% -50%;
     padding-bottom: 2em;
     position: relative;
+    width: 100%;
+}
+#main1 .illustration-editor img {
+    width: 100%;
 }
 #main-title {
     text-align: center;
-    border: solid;
     padding: 7em 0 4em 0;
     width: 100%;
     font-size: 1.5em;
@@ -315,7 +318,6 @@ main p {
     z-index: 1;
 }
 .main-text {
-    border: solid;
     width: 53%;
     padding: 0 5em 0 5em;
     position: relative;
@@ -324,28 +326,100 @@ main p {
 .main-text h1 {
     padding: 0 0em 1em 0;
 }
-.main-img {
+.illustration-editor {
     width: 50%;
     position: absolute;
     z-index: -1;
     right: 0;
-    top: 5.5em;
+    top: 9.5em;
 }
 #main1 p {
     padding-bottom: 4em;
 }
 
 #main2 {
-    border: solid springgreen;
+    width: 100%;
     border-radius: 0 10em 0 10em;
     margin-top: 7em;
     display: flex;
-    padding: 5em 0 5em 0;
+    padding: 6em 0 6em 0;
     background-image: radial-gradient(circle at 20% -90% , var(--very-dark-desaturated-blue-gradient) 1%, var(--very-dark-gray-blue-gradient) 100%), url('../images/bg-pattern-circles.svg') ;
     background-repeat: no-repeat;
     background-position: -80% 80%;
-    background-color: white;
+    color: white;
 }
 #main2 .main-text {
     left: 47%;
+}
+#main2 .illustration-phones {
+    position: absolute;
+    top: -100%;
+    right: 100%;
+    width: 70%;
+}
+#main2 .illustration-phones img {
+    width: 100%;
+    height: auto;
+}
+
+#main3 {
+    margin-top: 5em;
+    position: inherit;
+}
+#main3 .main-text {
+    left: 47%;
+    padding: 0 6em 0 7em;
+}
+#main3 .main-text h1 {
+    padding-top: 2.5em;
+}
+#main3 .illustration-laptop {
+    position: absolute;
+    width: 70%;
+    top: -7em;
+    right: 47em;
+    z-index: -1;
+}
+#main3 .illustration-laptop img {
+    width: 100%;
+}
+/*Mobile version of main*/
+
+@media screen and (max-width: 500px) {
+    #main1  h1{
+        font-size: 1.3em;
+    }
+    #main1 .illustration-editor {
+        width: 100%;
+        position: relative;
+        top: 0;
+    }
+    main .main-text {
+        width: 100%;
+        text-align: center;
+        padding: 0 2.5em !important;
+    }
+    #main2 .main-text {
+        left: 0;
+        padding-top: 7em;
+    }
+    #main2 .illustration-phones {
+        width: 100%;
+        right: 0;
+        top: -18em;
+    }
+
+    #main3 .illustration-laptop {
+        position: relative;
+        width: 100%;
+        top: 0;
+        right: 0;
+        border: solid;
+        margin: 0;
+    }
+    #main3 .main-text {
+        border: solid;
+        left: 0;
+        padding: 0em 2.0em;
+    }
 }
