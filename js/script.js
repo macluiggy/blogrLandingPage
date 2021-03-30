@@ -31,13 +31,13 @@ containerBurger.addEventListener('click', function () {
     var illustratorEditor = document.querySelector('#illustration-editor');// selecciona la imagen
     console.log(window.innerWidth);
     if (window.innerWidth < 500) { // si el ancho de la pantalla es menor que el valor
-        illustratorEditor.src = '/images/illustration-editor-mobile.svg';// cambia la imagen
+        illustratorEditor.src = './images/illustration-editor-mobile.svg';// cambia la imagen
     }
 
     //codigo para el main3
     var illustrationLaptop = document.querySelector('#illustration-laptop');
 
     if (window.innerWidth < 500) {
-        illustrationLaptop.src = '/images/illustration-laptop-mobile.svg';
+        illustrationLaptop.src = '../images/illustration-laptop-mobile.svg';
     }
 }());

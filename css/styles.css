@@ -30,7 +30,7 @@ body {
 }
 header {
     width: 100%;
-    background: url('/images/bg-pattern-intro.svg') center fixed no-repeat, linear-gradient(90deg, var( --very-light-red-gradient), var(--light-red-gradient));
+    background: url('../images/bg-pattern-intro.svg') center fixed no-repeat, linear-gradient(90deg, var( --very-light-red-gradient), var(--light-red-gradient));
     color: var(--white-text);
     padding-bottom: 10%;
     border-radius: 0 0 0 200px;
