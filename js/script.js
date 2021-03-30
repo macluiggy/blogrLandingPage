@@ -22,5 +22,6 @@
         navBar.classList.toggle("show");
     }
     }
+    
     //Fin de la parte del header
 }());
