@@ -13,15 +13,16 @@
         })
     }
  //aqui vamos a mostrar y ocultar el contenido con la
-    window.onload = function () {
-        var containerBurger = document.getElementById('containerBurguer');
-    var navBar = document.getElementById('toogleBar');
-    console.log(navBar.length);
-    containerBurger.addEventListener('click',showAndhide, false)
-    function showAndhide() {
-        navBar.classList.toggle("show");
-    }
-    }
-    
+ var containerBurger = document.querySelector('#containerBurger');
+ var navBar = document.querySelector('#toogleBar');
+console.log(containerBurger.innerHTML);
+
+containerBurger.addEventListener('click', function () {
+ if (navBar.style.display === 'block') {
+     navBar.style.display = 'none';
+ } else {
+     navBar.style.display = 'block';
+ }
+})
     //Fin de la parte del header
 }());

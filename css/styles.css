@@ -213,11 +213,9 @@ a {
          flex-direction: column;
          border-radius: 0.5em;
          height: fit-content;
+         display: none;
      }
-     .hide {
-         
-        display: none;
-     }
+     
      .show{
          display: block;
      }
