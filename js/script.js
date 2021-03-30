@@ -38,6 +38,6 @@ containerBurger.addEventListener('click', function () {
     var illustrationLaptop = document.querySelector('#illustration-laptop');
 
     if (window.innerWidth < 500) {
-        illustrationLaptop.src = '../images/illustration-laptop-mobile.svg';
+        illustrationLaptop.src = './images/illustration-laptop-mobile.svg';
     }
 }());
