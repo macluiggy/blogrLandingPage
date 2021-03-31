@@ -438,7 +438,6 @@ main p {
 footer {
     display: flex;
     flex-wrap: wrap;
-    border: solid;
     border-radius: 0 7em 0 0;
     width: 100%;
     padding: 4em 0 4em 0;
@@ -447,7 +446,6 @@ footer {
     color: var(--white-text);
 }
 footer .footer-logo {
-    border: solid springgreen;
     text-align: center;
     width: 25em;
     padding-bottom: 4em;
@@ -456,25 +454,29 @@ footer .footer-logo h1 {
     font-size: 2.5em;
 }
 footer .footer-contact-list {
-    border: solid rgb(241, 36, 9);
     width: 50%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 footer .footer-contact-list li {
     list-style-type: none;
 }
 footer .footer-contact-item {
-    border: solid;
+    font-weight: bold;
+    padding-top: 2em;
     
 }
 footer .footer-contact-item ul {
     padding-top: 2em;
     line-height: 2em;
+    font-weight: normal;
+}
+footer .footer-contact-item ul li:hover {
+    text-decoration: underline;
 }
 footer .attribution {
     width: 100%;
-    border: solid tomato;
     position: absolute;
     bottom: 0;
 }
@@ -488,7 +490,8 @@ footer .attribution a {
 @media screen and (max-width: 500px) {
     footer .footer-contact-list {
         width: 100%;
-        justify-content: space-around;
+        display: block;
+        text-align: center;
     }
     .footer li.footer-contact-item {
         text-align: center;
