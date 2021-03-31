@@ -6,7 +6,7 @@ This is a solution to the [Blogr landing page challenge on Frontend Mentor](http
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
+  - [Screenshot](#ScreenshoT)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -33,7 +33,7 @@ Users should be able to:
 ![Final design of the project](./final.png)
 ### Links
 
-- Live Site URL: [GitHub page](https://macluiggy.github.io/blogrLandingPage)
+- You can see the result [here](https://macluiggy.github.io/blogrLandingPage)
 
 ## My process
 
@@ -43,41 +43,30 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- media queries
+- JavaScript
 
 ### What I learned
+In this project I learned to adapt a page in responsive we design so an user can see the web page in a mobile device. I also learned to implement JavaScript so when the width of the page is small enough the image change to its corresponding mobile version, I did this as follows:
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+var illustratorEditor = document.querySelector('#illustration-editor');// selecciona la imagen
+    if (window.innerWidth < 500) { // si el ancho de la pantalla es menor que el valor
+        illustratorEditor.src = './images/illustration-editor-mobile.svg';// cambia la imagen
+    }
+
+    //codigo para el main3
+    var illustrationLaptop = document.querySelector('#illustration-laptop');
+
+    if (window.innerWidth < 500) {
+        illustrationLaptop.src = './images/illustration-laptop-mobile.svg';
+    }
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I really like the way CSS flexbox helps to manipulate the display of the elements of a container, surely I'll continue using this technique. In this project this is the first time I used media queries, so I'll continue making project to solidify its concepts.
 
 **Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
