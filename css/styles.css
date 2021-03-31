@@ -433,3 +433,64 @@ main p {
         padding: 0em 2.0em;
     }
 }
+
+/* footer section */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    border: solid;
+    border-radius: 0 7em 0 0;
+    width: 100%;
+    padding: 4em 0 4em 0;
+    position: relative;
+    background-color: var(--very-dark-black-blue-footer-background);
+    color: var(--white-text);
+}
+footer .footer-logo {
+    border: solid springgreen;
+    text-align: center;
+    width: 25em;
+    padding-bottom: 4em;
+}
+footer .footer-logo h1 {
+    font-size: 2.5em;
+}
+footer .footer-contact-list {
+    border: solid rgb(241, 36, 9);
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+footer .footer-contact-list li {
+    list-style-type: none;
+}
+footer .footer-contact-item {
+    border: solid;
+    
+}
+footer .footer-contact-item ul {
+    padding-top: 2em;
+    line-height: 2em;
+}
+footer .attribution {
+    width: 100%;
+    border: solid tomato;
+    position: absolute;
+    bottom: 0;
+}
+footer .attribution a {
+    text-decoration: none;
+    color: var(--very-light-red);
+    font-weight: bolder;
+}
+
+/*footer mobile */
+@media screen and (max-width: 500px) {
+    footer .footer-contact-list {
+        width: 100%;
+        justify-content: space-around;
+    }
+    .footer li.footer-contact-item {
+        text-align: center;
+    }
+}
