@@ -14,7 +14,6 @@ This is a solution to the [Blogr landing page challenge on Frontend Mentor](http
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 
 
@@ -77,5 +76,5 @@ I really like the way CSS flexbox helps to manipulate the display of the element
 ## Author
 
 - Frontend Mentor - [@macluiggy](https://www.frontendmentor.io/profile/macluiggy)
-- LinkedIn - (https://www.linkedin.com/in/luiggy-macias-402696155/)
+- LinkedIn - [Luiggy Macias](https://www.linkedin.com/in/luiggy-macias-402696155/)
 
